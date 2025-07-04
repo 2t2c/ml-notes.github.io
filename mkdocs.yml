@@ -1,5 +1,5 @@
 site_name: ML Notes
-site_url: https://2t2c.github.io/ml-notes
+site_url: https://2t2c.github.io/ml-notes/
 theme:
   name: material
   logo: assets/logo.png
