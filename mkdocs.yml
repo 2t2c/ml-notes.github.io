@@ -6,6 +6,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
+    - content.tooltips
   palette: 
     # Palette toggle for light mode
     - scheme: default
@@ -21,10 +22,51 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
-  
+
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.details
+  - tables
+  - pymdownx.magiclink
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+  - table-reader
+
 nav:
   - 'Home': 
     - 'About': 'home/about.md'
+  - 'Linear Algebra':
+    - 'About': 'linear-algebra/about.md'
+    - 'Chapters': 
+      - 'Introduction to Vectors':
+        - 'Preface': 'linear-algebra/introduction-to-vectors/preface.md'
+        - 'Vectors and Linear Combinations': 'linear-algebra/introduction-to-vectors/vectors-and-linear-combinations.md'
+        - 'Planes': 'linear-algebra/introduction-to-vectors/planes.md'
+        - 'Lengths and Dot Products': 'linear-algebra/introduction-to-vectors/lengths-and-dot-products.md'
+        - 'Matrices': 'linear-algebra/introduction-to-vectors/matrices.md'
   - 'Machine Learning':
     - 'About': 'ml/about.md'
   - 'Reinforcement Learning':
